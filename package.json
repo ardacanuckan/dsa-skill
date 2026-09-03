@@ -1,0 +1,28 @@
+{
+  "name": "dsa-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "JSON-IR diagram renderers (architecture / workflow / sequence / dataflow / lifecycle).",
+  "license": "MIT",
+  "bin": {
+    "dsa": "./bin/dsa.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "generate:validators": "node scripts/generate-validators.mjs",
+    "check:validators": "node scripts/generate-validators.mjs --check",
+    "test": "npm run check:validators && node scripts/run-tests.mjs",
+    "render:examples": "node scripts/render-examples.mjs out"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "parse5": "7.3.0",
+    "saxes": "6.0.0"
+  },
+  "overrides": {
+    "fast-uri": "3.1.5"
+  }
+}
